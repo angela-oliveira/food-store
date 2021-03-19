@@ -34,7 +34,7 @@ public class OrderManager {
         this.order = order;
     }
 
-    public void payOrder(Order order, PaymentStrategy paymentStrategy) {
+    public void payOrder(PaymentStrategy paymentStrategy) {
         order.setStatus(Order.OrderStatus.IN_PROGRESS);
         try {
             paymentService.doPayment(paymentStrategy, order);
@@ -48,7 +48,7 @@ public class OrderManager {
         }
     }
 
-    public void cancelOrder(Order order) {
+    public void cancelOrder() {
         order.setStatus(Order.OrderStatus.CANCELED);
         changeState(new OrderCanceledState());
         logService.debug(String.format("order %d canceled", order.getId()));
