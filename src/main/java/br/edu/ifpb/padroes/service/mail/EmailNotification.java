@@ -1,18 +1,17 @@
 package br.edu.ifpb.padroes.service.mail;
 
-import br.edu.ifpb.padroes.domain.Customer;
+import br.edu.ifpb.padroes.service.order.OrderStateSubscriber;
 
-public class EmailNotification {
 
-    private String emailAdministration = "contact@food-store.com";
+/***
+ * Padrão Observer: EmailNotification é um subscriber do Publisher OrderService
+ */
 
-    public void sendMailNotification(String message, Customer customer) {
-        System.out.println("send mail notification to "+ customer.getEmail());
-    }
+/**
+ * Padrão Strategy
+ */
+public interface EmailNotification extends OrderStateSubscriber {
 
-    public void sendMailNotification(String message) {
-        System.out.println("send mail notification to ="+emailAdministration);
-    }
-
+    void sendMailNotification(String message, String email);
 
 }
