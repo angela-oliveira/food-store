@@ -1,4 +1,4 @@
-package br.edu.ifpb.padroes.strategy.copy;
+package br.edu.ifpb.padroes.strategy;
 
 import br.edu.ifpb.padroes.domain.Payment;
 import br.edu.ifpb.padroes.domain.PaymentType;

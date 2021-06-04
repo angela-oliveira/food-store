@@ -2,7 +2,7 @@ package br.edu.ifpb.padroes.service.payment;
 
 import br.edu.ifpb.padroes.domain.Payment;
 import br.edu.ifpb.padroes.domain.PaymentType;
-import br.edu.ifpb.padroes.strategy.copy.PaymentInterface;
+import br.edu.ifpb.padroes.strategy.PaymentInterface;
 
 public class PaymentService {
 
