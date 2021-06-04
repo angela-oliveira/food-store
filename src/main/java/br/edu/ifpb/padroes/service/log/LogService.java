@@ -8,6 +8,7 @@ public class LogService {
 
     private LogHandler logHandler;
 
+    
     public void debug(String message) {
         logHandler.log("stack trace");
         logHandler.log(message);
